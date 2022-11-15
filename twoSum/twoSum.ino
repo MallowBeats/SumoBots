@@ -1,36 +1,32 @@
-const long vector[12] = {};
+const int vector[12] = {};
 
-
-void setup() {
+void setup(){
   Serial.begin(9600); 
   long target = random(12);
   long vector[target] = {};
   Serial.println(" target: ");
   Serial.println(target);
-
   
- for(int i = 0; i < target ; i++)
+  Serial.print("Set of numbers:");
+for(int i = 0; i < target ; i++)
 {
-   vector[i] = random(12); 
-  Serial.print("  ,");
+  vector[i] = random(12); 
   Serial.print(vector[i]);
-  
+  Serial.print(", ");
 }
+  Serial.println();
 
 
-long toTest = yourSolution( vector, target);
-if(toTest == target){
-  Serial.println("Great Job You passed!!");
-}
-else{
-  Serial.println("Please Try again");
-}
-
-
-
-
-  
-
+  int toTest = yourSolution(vector, target);
+  if(toTest == target)
+  {
+    Serial.println("Great Job You passed!!");
+  }
+  else
+  {
+    Serial.println("Please Try again");
+  }
+ 
 }
 
 
@@ -41,16 +37,15 @@ else{
 // Fun Fact this is a common FaceBook Interview Problem.
 // 
 
-long yourSolution(long vector, long target) {
+int yourSolution(long vector[], long target){
   // this is space for your solution
-  // make sure you change the dumyVar in the return statement.
+  // make sure you change the dummyVar in the return statement.
   //
-  long dummyVar = 0;
- 
- return dummyVar ; 
-
   
-
+  
+  	long solution = 0;
+ 
+ 	return solution ; 
 }
 void loop(){
   
